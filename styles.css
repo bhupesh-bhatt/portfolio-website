@@ -237,8 +237,8 @@ body {
   align-items: center;
 }
 .avatar {
-  width: 108px;
-  height: 108px;
+  width: 99px;
+  height: 99px;
   border-radius: 14px;
   object-fit: cover;
   border: 1px solid rgba(255,255,255,0.06);
