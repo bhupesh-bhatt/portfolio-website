@@ -195,3 +195,38 @@ body{
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .social a{color:var(--text);opacity:.9;text-decoration:none;padding:6px 10px;border-radius:8px}
 .social a:hover{background:rgba(255,255,255,0.08)}
+
+/* Testimonials section styles */
+.testimonials {
+  padding: 36px 0;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+.testimonial-card {
+  padding: 22px;
+  min-height: 120px;
+  font-size: 1.05em;
+  background: rgba(240,240,255,0.08);
+  box-shadow: 0 6px 24px rgba(120,60,233,0.06);
+  border-radius: var(--card-radius);
+}
+.testimonial-meta {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.97em;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(.995);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.2,.9,.25,1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
