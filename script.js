@@ -16,7 +16,7 @@
   function applyTheme(theme){
     if(theme === 'light') document.documentElement.classList.add('light');
     else document.documentElement.classList.remove('light');
-    themeToggle.textContent = theme === 'light' ? '🌞' : '🌙';
+    themeToggle.textContent = theme === 'light' ? '️🌙' : '🔆️';
   }
   const saved = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark');
   applyTheme(saved);
