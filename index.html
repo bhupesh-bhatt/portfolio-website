@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bhupesh Bhatt — Portfolio</title>
+  <meta name="description" content="Portfolio with glassmorphism, liquid navigation and animations" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Liquid glass nav -->
+    <header class="header">
+      <div class="nav-wrap glass">
+        <nav class="nav" aria-label="Primary">
+          <div class="nav-left">
+            <a class="brand" href="#home" aria-label="Home">BBHATT</a>
+          </div>
+
+          <ul class="nav-list" id="navList" role="menubar">
+            <li class="nav-item" data-target="home" role="none"><a role="menuitem" href="#home">Home</a></li>
+            <li class="nav-item" data-target="resume" role="none"><a role="menuitem" href="#resume">Resume</a></li>
+            <li class="nav-item" data-target="services" role="none"><a role="menuitem" href="#services">Services</a></li>
+            <li class="nav-item" data-target="projects" role="none"><a role="menuitem" href="#projects">Projects</a></li>
+            <li class="nav-item" data-target="contact" role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-right">
+            <button id="themeToggle" class="btn icon" aria-label="Toggle theme">🌙</button>
+          </div>
+
+          <!-- Liquid blob -->
+          <div class="liquid-blob" id="liquidBlob" aria-hidden="true"></div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section id="home" class="section hero" data-title="Home">
+        <div class="container hero-inner">
+          <div class="hero-left glass card">
+            <div class="profile">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Profile" class="avatar">
+              <div>
+                <h1 class="title">Hi, I'm Bhupesh</h1>
+                <p class="lead">A modern UI developer crafting elegant, performant web experiences with glassmorphism and delightful interactions.</p>
+                <div class="cta-row">
+                  <a class="btn primary" href="#projects">View Projects</a>
+                  <a class="btn ghost" href="#contact">Contact Me</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="floating-art">
+              <!-- Decorative animated SVG blob background (liquid) -->
+              <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="bg-blob" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#8ec5ff"/>
+                    <stop offset="1" stop-color="#e0c3fc"/>
+                  </linearGradient>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur"/>
+                    <feColorMatrix in="blur" mode="matrix" values="
+                      1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 30 -10" result="goo"/>
+                    <feBlend in="SourceGraphic" in2="goo"/>
+                  </filter>
+                </defs>
+                <g filter="url(#goo)" class="blobs">
+                  <circle class="b1" cx="150" cy="200" r="100" fill="url(#g1)"/>
+                  <circle class="b2" cx="300" cy="120" r="120" fill="#a0ffd8" opacity="0.9"/>
+                  <circle class="b3" cx="420" cy="260" r="90" fill="#ffc0cb" opacity="0.9"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume" class="section resume">
+        <div class="container">
+          <h2 class="section-title">Resume</h2>
+          <div class="resume-grid">
+            <div class="glass card resume-left">
+              <h3>Experience</h3>
+              <ul class="timeline">
+                <li>
+                  <span class="time">2023 — Present</span>
+                  <strong>Senior UI Developer</strong>
+                  <p>Building performant UI systems, design systems, and micro-interactions.</p>
+                </li>
+                <li>
+                  <span class="time">2020 — 2023</span>
+                  <strong>Frontend Engineer</strong>
+                  <p>Delivered responsive apps and component libraries for web platforms.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="glass card resume-right">
+              <h3>Education & Skills</h3>
+              <p><strong>Education:</strong> B.Sc. Computer Science</p>
+              <p><strong>Skills:</strong> HTML, CSS, JS, React, Accessibility, Animation, Design Systems</p>
+              <h4>Download</h4>
+              <div class="cta-row">
+                <a class="btn primary" href="#" download>Download PDF</a>
+                <a class="btn ghost" href="#contact">Request CV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section services">
+        <div class="container">
+          <h2 class="section-title">Services</h2>
+          <div class="cards-grid">
+            <article class="glass card service">
+              <h3>UI Design</h3>
+              <p>Pixel-perfect interfaces with modern glass UI and accessible patterns.</p>
+            </article>
+            <article class="glass card service">
+              <h3>Frontend Development</h3>
+              <p>Fast, maintainable code and component-driven architecture.</p>
+            </article>
+            <article class="glass card service">
+              <h3>Motion & Interaction</h3>
+              <p>Micro-interactions and animations that delight without sacrificing performance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section projects">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <!-- Project card (repeat/duplicate to add actual projects) -->
+            <article class="glass card project">
+              <div class="project-media" style="background-image:url('https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder')"></div>
+              <div class="project-body">
+                <h4>Project One</h4>
+                <p>Interactive dashboard with realtime charts and responsive layout.</p>
+                <div class="project-meta">
+                  <span class="tag">React</span>
+                  <a class="link" href="#" target="_blank" rel="noopener">View</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass card project">
+              <div class="project-media" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder')"></div>
+              <div class="project-body">
+                <h4>Project Two</h4>
+                <p>Design system and component library used across multiple products.</p>
+                <div class="project-meta">
+                  <span class="tag">Design System</span>
+                  <a class="link" href="#" target="_blank" rel="noopener">View</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass card project">
+              <div class="project-media" style="background-image:url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder')"></div>
+              <div class="project-body">
+                <h4>Project Three</h4>
+                <p>Performance focused front-end for high-traffic marketing site.</p>
+                <div class="project-meta">
+                  <span class="tag">Performance</span>
+                  <a class="link" href="#" target="_blank" rel="noopener">View</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <div class="contact-wrap">
+            <div class="glass card contact-info">
+              <h3>Let's build something</h3>
+              <p>Email: <a href="mailto:hello@bbhatt.com.np">hello@bbhatt.com.np</a></p>
+              <p>Location: Kathmandu, Nepal</p>
+              <p>Available for freelance & full-time</p>
+            </div>
+
+            <form id="contactForm" class="glass card contact-form" action="#" method="post" novalidate>
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@domain.com" required>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
+              </label>
+              <div class="form-row">
+                <button type="submit" class="btn primary">Send Message</button>
+                <button type="button" id="mailMe" class="btn ghost">Open Mail</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> bbhatt.com.np — All rights reserved.</p>
+        <div class="social">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
